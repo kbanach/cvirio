@@ -1,0 +1,14 @@
+{
+  "name": "cvirio",
+  "version": "1.0.0",
+  "description": "An idea of how to make a CV a little less boring",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "banach.krystian@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "phaser-ce": "^2.9.1"
+  }
+}
