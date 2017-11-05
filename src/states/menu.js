@@ -1,8 +1,6 @@
 module.exports = {
-    create: function(){
-    //This is just like any other Phaser create function
-    },
-    update: function(){
-    //Game logic goes here
+    create: function () {
+        // we don't create anything here
+        game.state.start('menu');
     },
 };

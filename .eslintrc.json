@@ -1,0 +1,16 @@
+{
+    "extends": "airbnb",
+    "rules": {
+        "indent": ["error", 4],
+        "spaced-comment": ["error", "always"],
+        "object-shorthand": ["error", "never"],
+        "func-names": ["error", "never"]
+    },
+    "env": {
+        "browser": true
+    },
+    "globals": {
+        "Phaser": true,
+        "game": true
+    }
+}
