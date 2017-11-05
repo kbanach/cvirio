@@ -60,5 +60,31 @@ or
 $ npm run build
 ```
 
+Publish on GitHub Pages
+-----------------------
+
+Following (cobyism manual)[https://gist.github.com/cobyism/4730490]
 
 
+### Important
+To make following commands valid, the `dist/` directory can't be ignored in `.gitignore`
+
+1. Run following commands:
+    ```bash
+    $ npm run build && git add dist 
+    ```
+
+1. Then do `git commit` with proper message, e.g.:
+    ```bash
+    $ git commit -m "gh-pages update"
+    ```
+
+1. Then simply push to dedicated branch:
+    ```bash
+    $ git subtree push --prefix dist origin gh-pages
+    ```
+
+1. And remove the `dist/` directory again:
+    ```bash
+    $ rm -rf dist
+    ```
