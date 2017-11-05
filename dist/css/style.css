@@ -1,0 +1,7 @@
+body {
+    background: url('../images/bckg.jpg') no-repeat 50% -200px; /* IMPORTANT: there is -200px because for now canvas should touch top of the webpage */
+}
+
+#game-container canvas {
+    margin: 0 auto;
+}
