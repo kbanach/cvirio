@@ -8,14 +8,17 @@ module.exports = {
 
         // tutorial assets
         game.load.image('sky', 'assets/sky.png');
-        game.load.image('platform', 'assets/platform.png');
+        game.load.image('sky_alt', 'assets/sky_alt.png');
+        game.load.image('box', 'assets/box.png');
+        game.load.image('paper', 'assets/old_paper.png');
 
         // This is the bright blue bar that is hidden by the dark bar
         this.barBg = game.add.sprite(game.world.centerX, game.world.centerY + 40, 'load_progress_bar');
         this.barBg.anchor.setTo(0.5, 0.5);
 
-        game.load.image('star', 'assets/star.png');
-        game.load.image('dude', 'assets/dude.png');
+        game.load.spritesheet('dude', 'assets/dude.png', 32, 48);
+        game.load.spritesheet('dude_alt', 'assets/dude_alt.png', 32, 48);
+        game.load.spritesheet('lightSwtich', 'assets/switch.png', 34, 52);
 
         // This bar will get cropped by the setPreloadSprite function as the game loads!
         this.bar = game.add.sprite(game.world.centerX - 192, game.world.centerY + 40, 'load_progress_bar_dark');

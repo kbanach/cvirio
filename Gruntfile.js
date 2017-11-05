@@ -52,7 +52,7 @@ module.exports = function(grunt){
             },
             src: {
                 files: ['src/**/*.js', 'public/*'],
-                tasks: ['build'],
+                tasks: ['generateDist', 'inject'],
                 options: {
                     interrupt: true,
                 },
@@ -74,11 +74,13 @@ module.exports = function(grunt){
                     port: 8000,
                     base: 'dist/'
                 }
-            }
+            },
         },
     }); 
 
-    grunt.registerTask('build', ['eslint', 'clean', 'browserify', 'uglify', 'copy']);
+    grunt.registerTask('generateDist', ['clean', 'browserify', 'uglify', 'copy']);
+
+    grunt.registerTask('build', ['eslint', 'generateDist']);
     
     grunt.registerTask('serve', ['build', 'inject', 'connect', 'watch']);
 
